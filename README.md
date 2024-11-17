@@ -68,6 +68,21 @@ git clone https://github.com/rafamartinezquiles/yolov11-explainable-ai.git
 3. In the same folder that the requirements are, install the necessary requirements
 
 ```bash
-cd AÑADIR CARPETA AL DESCARGAR EL REPO
+cd yolov11-explainable-ai
 pip install -r requirements.txt
+```
+
+### Setup
+It is worth noting that the "Udacity Self Driving Car Dataset" provides functionality to download it in YOLOv11 format, which is recommended.
+
+1. Retrieve the "Udacity Self Driving Car Dataset" in YOLOv11 format from the provided [link](https://public.roboflow.com/object-detection/self-driving-car/2). Download it as a zip file and ensure to place it within the main folder of the cloned repository named yolov11-explainable-ai.
+
+```bash
+mv /path/to/source /path/to/destination
+```
+
+2. Inside the cloned repository, execute the following command in order to unzip the "Udacity Self Driving Car Dataset" necessary for the project elaboration.
+
+```bash
+unzip bib\ detection\ big\ data.v3i.yolov8.zip -d BDBD
 ```
