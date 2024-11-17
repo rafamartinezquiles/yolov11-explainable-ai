@@ -84,5 +84,11 @@ mv /path/to/source /path/to/destination
 2. Inside the cloned repository, execute the following command in order to unzip the "Udacity Self Driving Car Dataset" necessary for the project elaboration.
 
 ```bash
-unzip bib\ detection\ big\ data.v3i.yolov8.zip -d BDBD
+tar -xf "Self Driving Car.v2-fixed-large.yolov11.zip" -C Udacity
+```
+
+3. Since the data is not divided into training and test, we will run the following python file that will divide the data into 70% for training and the remaining 30% for test taking into account the images and labels.
+
+```bash
+python src/split_train_test.py
 ```
