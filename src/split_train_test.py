@@ -2,15 +2,15 @@ import os
 import shutil
 import random
 
-# Set up paths
-export_path = 'export'
-images_path = os.path.join(export_path, 'images')
-labels_path = os.path.join(export_path, 'labels')
+# Set up paths according to the new folder structure
+base_path = 'Udacity/export'
+images_path = os.path.join(base_path, 'images')
+labels_path = os.path.join(base_path, 'labels')
 
-train_images_path = 'train/images'
-test_images_path = 'test/images'
-train_labels_path = 'train/labels'
-test_labels_path = 'test/labels'
+train_images_path = 'Udacity/train/images'
+test_images_path = 'Udacity/test/images'
+train_labels_path = 'Udacity/train/labels'
+test_labels_path = 'Udacity/test/labels'
 
 # Create directories if they don't exist
 os.makedirs(train_images_path, exist_ok=True)
@@ -48,3 +48,4 @@ move_files(train_files, images_path, train_images_path)
 move_files(test_files, images_path, test_images_path)
 
 print("Files moved successfully!")
+
