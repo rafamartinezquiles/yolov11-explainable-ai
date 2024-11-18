@@ -93,3 +93,8 @@ tar -xf "Self Driving Car.v2-fixed-large.yolov11.zip" -C Udacity
 ```bash
 python src/split_train_test.py
 ```
+
+4. A particularity that YOLOv11 has, being quite new, is the fact that in the .yaml file in which we specify the path to the training, validation and test data, we have to specify the complete path. For it, in this step, we open the file “data.yaml” and we modify the alternative routes so that they are complete. An example is the following:
+```bash
+train: c:\Users\user_name\Desktop\yolov11-explainable-ai\Udacity\train\images
+```
