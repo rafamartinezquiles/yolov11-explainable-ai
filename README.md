@@ -98,3 +98,19 @@ python src/split_train_test.py
 ```bash
 train: c:\Users\user_name\Desktop\yolov11-explainable-ai\Udacity\train\images
 ```
+
+## Training of neural networks
+The training of the neural networks will be accomplished by executing the following command, passing a series of arguments that define the characteristics of the neural network. The arguments to be specified are:
+
+- **data:** This parameter represents the path leading to the .yaml file associated to the dataset. It should be the complete path
+- **epochs:** Denotes the number of training epochs. 
+- **imgsz:** Refers to the image size utilized during training.
+- **batch:** Specifies the batch size utilized during training.
+- **name:** Represents the name assigned to the neural network.
+- **patience:** Number of epochs to wait without improvement in validation metrics before early stopping the training.
+
+```bash
+yolo task=detect mode=train model=yolo11s.pt data=Udacity/data.yaml epochs=10 imgsz=640 batch=16 name=yolov11_models patience=10
+```
+
+In case of not having the necessary time or resources to train the neural networks, you can access the weights of the neural networks in the following [Still add link](https://upm365-my.sharepoint.com/:f:/g/personal/rafael_martinez_quiles_alumnos_upm_es/EglMEhA_I9pJgzHpK_QYVHgBIvmszjXRYUIuGxlIEJ-k9w?e=nVKcsS).
