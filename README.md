@@ -6,42 +6,12 @@
 
 ## Table of Contents
 ```
-BibObjectDetection
+yolov11-explainable-ai
 |__ images
-|   |__ results_accuracy.png 
-|   |__ threshold.jpg
-|   |__ yolo_application.png
 |__ weights
-|   |__ BDBD
-|   |   |__ yolov8l.pt
-|   |   |__ yolov8m.pt 
-|   |   |__ yolov8s.pt 
-|   |   |__ yolov8n.pt 
-|   |__ People
-|   |   |__ yolov8l.pt
-|   |   |__ yolov8m.pt 
-|   |   |__ yolov8s.pt 
-|   |   |__ yolov8n.pt 
-|   |__ SVHN
-|   |   |__ yolov8l.pt
-|   |   |__ yolov8m.pt 
-|   |   |__ yolov8s.pt 
-|   |   |__ yolov8n.pt 
-|__ labels
-|   |__ labels_test
-|   |   |__ all the labels in txt format
-|   |__ labels_train
-|   |   |__ all the labels in txt format
 |__ src
-    |__ create_csv.py
-    |__ create_yaml.py
-    |__ data_augmentation.py
-    |__ image_prediction.py
-    |__ move_png_files.py
-    |__ train.py
-    |__ video_prediction.py
+    |__ split_train_test.py
 README.md
-requirements.txt
 ```
 
 ## Getting started
@@ -110,7 +80,7 @@ The training of the neural networks will be accomplished by executing the follow
 - **patience:** Number of epochs to wait without improvement in validation metrics before early stopping the training.
 
 ```bash
-yolo task=detect mode=train model=yolo11s.pt data=Udacity/data.yaml epochs=10 imgsz=640 batch=16 name=yolov11_models patience=10
+!yolo task=detect mode=train model=yolo11s.pt data=Udacity/data.yaml epochs=10 imgsz=640 batch=16 name=yolov11_models patience=10
 ```
 
 In case of not having the necessary time or resources to train the neural networks, you can access the weights of the neural networks in the following [Still add link](https://upm365-my.sharepoint.com/:f:/g/personal/rafael_martinez_quiles_alumnos_upm_es/EglMEhA_I9pJgzHpK_QYVHgBIvmszjXRYUIuGxlIEJ-k9w?e=nVKcsS).
