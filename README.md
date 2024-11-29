@@ -79,8 +79,10 @@ The training of the neural networks will be accomplished by executing the follow
 - **name:** Represents the name assigned to the neural network.
 - **patience:** Number of epochs to wait without improvement in validation metrics before early stopping the training.
 
+An example of the command used for training, incorporating these parameters, is as follows:
+
 ```bash
-!yolo task=detect mode=train model=yolo11s.pt data=Udacity/data.yaml epochs=10 imgsz=640 batch=16 name=yolov11_models patience=10
+!yolo task=detect mode=train model=yolo11n.pt data=complete_path/yolov11-explainable-ai/SDC/data.yaml epochs=400 imgsz=640 batch=16 name=yolov11_models_n patience=10
 ```
 
 In case of not having the necessary time or resources to train the neural networks, you can access the weights of the neural networks in the following [Still add link](https://upm365-my.sharepoint.com/:f:/g/personal/rafael_martinez_quiles_alumnos_upm_es/EglMEhA_I9pJgzHpK_QYVHgBIvmszjXRYUIuGxlIEJ-k9w?e=nVKcsS).
