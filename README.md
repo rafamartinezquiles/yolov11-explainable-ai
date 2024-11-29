@@ -17,7 +17,7 @@ README.md
 ## Getting started
 
 ### Resources used
-
+A high-performance desktop computer equipped with an AMD Ryzen Threadripper PRO 5975WX 32-Core CPU and a powerful NVIDIA GeForce RTX 4090 GPU (24GB RAM) has been utilized. This system is further supported by 128GB of RAM, ensuring robust performance for demanding computational tasks. The GPU's advanced capabilities, including parallel processing, have been leveraged to optimize training time.
 
 ### Installing
 The project is deployed in a local machine, so you need to install the next software and dependencies to start working:
