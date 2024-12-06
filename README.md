@@ -8,7 +8,6 @@
 ```
 yolov11-explainable-ai
 |__ images
-|__ weights
 |__ src
     |__ split_train_test.py
 README.md
