@@ -85,4 +85,4 @@ An example of the command used for training, incorporating these parameters, is 
 !yolo task=detect mode=train model=yolo11n.pt data=complete_path/yolov11-explainable-ai/SDC/data.yaml epochs=400 imgsz=640 batch=16 name=yolov11_models_n patience=10
 ```
 
-In case of not having the necessary time or resources to train the neural networks, you can access the weights of the neural networks in the following [Still add link](https://upm365-my.sharepoint.com/:f:/g/personal/rafael_martinez_quiles_alumnos_upm_es/EglMEhA_I9pJgzHpK_QYVHgBIvmszjXRYUIuGxlIEJ-k9w?e=nVKcsS).
+In case of not having the necessary time or resources to train the neural networks, you can access the weights of the neural networks in the following [Link](https://drive.google.com/drive/folders/1M1R6dTDRGQSBAA3VU1CibKp3VIcQFow9?usp=drive_link).
