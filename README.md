@@ -85,3 +85,11 @@ An example of the command used for training, incorporating these parameters, is 
 ```
 
 In case of not having the necessary time or resources to train the neural networks, you can access the weights and training information of the neural networks in the following [link](https://drive.google.com/drive/folders/1M1R6dTDRGQSBAA3VU1CibKp3VIcQFow9?usp=drive_link).
+
+## Extracting Labels After Prediction
+This section covers the process of executing a script to create a new folder containing labels associated with the predictions from the test folder. Each label file will share the same name as its corresponding original image but will use a .txt extension instead of the image extension (e.g., .jpg or .png). This format allows for easy comparison with the original labels to compute evaluation metrics. The script can be executed as follows:
+
+```bash
+python prediction.py --model complete_path\yolov11_models_s\weights\best.pt --source complete_path\test\images
+```
+
