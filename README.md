@@ -112,6 +112,6 @@ class_id center_x center_y width height
 Also, the values are normalized ensuring that the bounding box coordinates are independent of image resolution, scaling them to fall within the range of 0 to 1.
 
 ### Mean Average Precision (mAP)
-mAP is the standard metric for object detection tasks, summarizing the precision-recall curve for each class in the dataset. It provides a comprehensive view of the model’s ability to balance precision and recall. In the context of our dataset, mAP would quantify the effectiveness of the model in accurately detecting objects like pedestrians, cars, bikers, and traffic lights across all 11 classes. That is why we are going to calculate it at multiple Intersection over Union (IoU) thresholds (0.5 and 0.75) to demonstrate how well the model handles detection accuracy under varying levels of localization stringency.
+Mean Average Precision is the standard metric for object detection tasks, summarizing the precision-recall curve for each class in the dataset. It provides a comprehensive view of the model’s ability to balance precision and recall. In the context of our dataset, mAP would quantify the effectiveness of the model in accurately detecting objects like pedestrians, cars, bikers, and traffic lights across all 11 classes. That is why we are going to calculate it at multiple Intersection over Union (IoU) thresholds (0.5 and 0.75) to demonstrate how well the model handles detection accuracy under varying levels of localization stringency.
 
 
