@@ -98,7 +98,18 @@ python prediction.py --model complete_path\yolov11_models_s\weights\best.pt --so
 Executing this command yields several key results. First, it provides the average times in milliseconds for preprocessing, inference, and postprocessing, offering insights into the model's efficiency. Additionally, it outputs the total number of tags detected during the process. Finally, it generates a folder containing all the detected tags in .txt format, which can be used subsequently to calculate the desired evaluation metrics.
 
 ## Evaluation Metrics
-For evaluating the performance of our model trained on this dataset, the following evaluation metrics are appropriate and their meaning will be the following.
+For evaluating the performance of our model trained on this dataset, the following evaluation metrics are appropriate and their meaning will be the following. But before going into each of the evaluation metrics, it is necessary to highlight the way in which the labels are formed in order to understand how they work.
+
+The labels in this dataset adhere to the YOLOv11 TXT format, which ensures consistency and compatibility with the YOLO framework. Each image is associated with a .txt file containing a line for each bounding box. The structure of each row is:
+
+```bash
+class_id center_x center_y width height
+```
+
+![](images/yolov11_txt_format.jpg)
+
+
+Also, the values are normalized ensuring that the bounding box coordinates are independent of image resolution, scaling them to fall within the range of 0 to 1.
 
 ### Mean Average Precision (mAP)
 mAP is the standard metric for object detection tasks, summarizing the precision-recall curve for each class in the dataset. It provides a comprehensive view of the model’s ability to balance precision and recall. In the context of our dataset, mAP would quantify the effectiveness of the model in accurately detecting objects like pedestrians, cars, bikers, and traffic lights across all 11 classes. That is why we are going to calculate it at multiple Intersection over Union (IoU) thresholds (0.5 and 0.75) to demonstrate how well the model handles detection accuracy under varying levels of localization stringency.
