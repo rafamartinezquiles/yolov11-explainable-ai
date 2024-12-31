@@ -93,3 +93,7 @@ This section covers the process of executing a script to create a new folder con
 python prediction.py --model complete_path\yolov11_models_s\weights\best.pt --source complete_path\test\images
 ```
 
+Executing this command yields several key results. First, it provides the average times in milliseconds for preprocessing, inference, and postprocessing, offering insights into the model's efficiency. Additionally, it outputs the total number of tags detected during the process. Finally, it generates a folder containing all the detected tags in .txt format, which can be used subsequently to calculate the desired evaluation metrics.
+
+## Evaluation Metrics
+
