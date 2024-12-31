@@ -106,7 +106,7 @@ The labels in this dataset adhere to the YOLOv11 TXT format, which ensures consi
 class_id center_x center_y width height
 ```
 
-![](images/yolov11_txt_format.jpg)
+![](images/yolov11_txt_format.jpeg)
 
 
 Also, the values are normalized ensuring that the bounding box coordinates are independent of image resolution, scaling them to fall within the range of 0 to 1.
