@@ -16,7 +16,9 @@ README.md
 ## Getting started
 
 ### Resources used
-A high-performance desktop computer equipped with an AMD Ryzen Threadripper PRO 5975WX 32-Core CPU and a powerful NVIDIA GeForce RTX 4090 GPU (24GB RAM) has been utilized. This system is further supported by 128GB of RAM, ensuring robust performance for demanding computational tasks. The GPU's advanced capabilities, including parallel processing, have been leveraged to optimize training time.
+A high-performance desktop computer equipped with an AMD Ryzen Threadripper PRO 5975WX 32-Core CPU and a powerful NVIDIA GeForce RTX 4090 GPU (24GB RAM) has been utilized for the training. This system is further supported by 128GB of RAM, ensuring robust performance for demanding computational tasks. The GPU's advanced capabilities, including parallel processing, have been leveraged to optimize training time.
+
+On the other hand, an Acer Nitro AN515-55 laptop powered by an Intel® Core™ i7-10750H CPU @ 2.60GHz and equipped with 48GB of RAM has been utilized for the rest of operations. This high-performance system ensures efficient handling of the prediction phase and evaluation metric computations for various tasks. The laptop's 64-bit operating system and x64-based processor architecture support modern computational operations, including processing predictions, generating evaluation metrics, and managing large datasets.
 
 ### Installing
 The project is deployed in a local machine, so you need to install the next software and dependencies to start working:
