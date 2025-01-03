@@ -140,3 +140,13 @@ This graph provides a clear comparison of the evaluation metrics across all YOLO
 ```bash
 python graph_evaluation_metrics.py
 ```
+
+## Additional Task - Computational Efficiency Graph
+In this section we will show how to execute the code associated with the following representation:
+
+![](images/timing_analysis_heatmap.png)
+
+This graph presents a detailed comparison of the computational efficiency across all YOLOv11 models. A closer look reveals that the preprocessing and postprocessing times remain nearly constant, irrespective of the model size, indicating that these stages are not influenced by the model used. However, the inference time per image significantly increases as the model size grows, which is expected due to the increased complexity and computational demands of larger models. This logical trend highlights the trade-off between model size and computational efficiency. To replicate these results, simply execute the following command, and you're ready to go.
+
+```bash
+python computational_efficiency_matrix.py
