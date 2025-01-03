@@ -130,5 +130,9 @@ This code is designed to evaluate the performance of object detection models by 
 python evaluation_metrics.py <original_labels_folder> <predicted_labels_folder>
 ```
 
+## Additional Task - Evaluation Metrics Comparison Graph
+In this section we will show how to execute the code associated with the following representation:
+
+![](images/model_performance_comparison.png)
 
 
