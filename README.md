@@ -135,4 +135,8 @@ In this section we will show how to execute the code associated with the followi
 
 ![](images/model_performance_comparison.png)
 
+This graph provides a clear comparison of the evaluation metrics across all YOLOv11 models. A quick analysis reveals that the extreme model outperforms the others in most metrics, with the nano model following closely behind. Interestingly, this highlights that a larger model does not always guarantee better performance. To obtain it, we should only execute the following command and we are all set.
 
+```bash
+python graph_evaluation_metrics.py
+```
