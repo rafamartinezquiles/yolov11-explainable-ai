@@ -114,6 +114,21 @@ class_id center_x center_y width height
 Also, the values are normalized ensuring that the bounding box coordinates are independent of image resolution, scaling them to fall within the range of 0 to 1.
 
 ### Mean Average Precision (mAP)
-Mean Average Precision is the standard metric for object detection tasks, summarizing the precision-recall curve for each class in the dataset. It provides a comprehensive view of the model’s ability to balance precision and recall. In the context of our dataset, mAP would quantify the effectiveness of the model in accurately detecting objects like pedestrians, cars, bikers, and traffic lights across all 11 classes. That is why we are going to calculate it at multiple Intersection over Union (IoU) thresholds (0.5 and 0.75) to demonstrate how well the model handles detection accuracy under varying levels of localization stringency.
+Mean Average Precision (mAP) is a widely used metric in object detection that evaluates the overall performance of a model in identifying objects. It combines precision and recall by calculating the average precision across all object classes. A high mAP value indicates that the model consistently detects objects correctly across multiple categories, with both high precision (few false positives) and high recall (few false negatives). Conversely, a low mAP suggests that the model struggles with either identifying objects or avoiding false positives, making it an important indicator of model effectiveness in real-world applications.
+
+### Precision and Recall 
+Precision and recall are fundamental metrics that assess a model's ability to detect relevant objects. Precision measures the proportion of true positives (correct detections) out of all predicted positives, representing how accurate the model is when it claims to have detected an object. Recall, on the other hand, measures the proportion of true positives out of all actual objects, indicating how well the model captures all the relevant instances. In object detection for autonomous driving, precision and recall are crucial for ensuring that the model identifies objects accurately while minimizing missed detections and false positives.
+
+### F1 Score
+The F1 score is a balanced metric that combines precision and recall into a single value, offering a more comprehensive view of a model's performance. It is the harmonic mean of precision and recall, where a higher F1 score indicates a model that performs well in both detecting objects accurately and capturing as many relevant objects as possible. In autonomous driving applications, a high F1 score is essential because it ensures that the object detection system is both reliable and comprehensive, making it a critical measure for evaluating model performance.
+
+
+### Calculation with the code
+This code is designed to evaluate the performance of object detection models by comparing predicted bounding boxes with ground truth bounding boxes. It parses YOLO format label files, computes Intersection over Union (IoU) to match predicted boxes to ground truth boxes, and then calculates precision, recall, F1 score, and mean Average Precision (mAP). 
+
+```bash
+python evaluation_metrics.py <original_labels_folder> <predicted_labels_folder>
+```
+
 
 
