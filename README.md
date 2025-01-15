@@ -151,6 +151,21 @@ python src/eigen_cam.py
 
 This script will process the specified input image, apply EigenCAM, and display the resulting image with blue pixels highlighting the most significant spatial features contributing to the model’s predictions. The only limitation is that there is no Class-Specific Attribution.
 
+## Deep Feature Factorization (DFF): Decomposing Feature Activations for Insights
+Deep Feature Factorization (DFF) is a method that decomposes the activation space of a model into multiple spatial components, revealing diverse patterns and regions of importance in the image. Unlike methods that provide a single visualization, DFF extracts multiple activation components, making it ideal for understanding complex feature hierarchies in object detection models like YOLO. Some of the key features are:
+
+- **Component-Based Visualization:** DFF factorizes the activations into multiple spatial components. In this implementation, the activations are divided into 8 distinct components, each highlighting different regions or features that influence the model’s predictions.
+- **Gradient-Free Method:** Like EigenCAM, DFF does not require gradient computations, making it highly compatible with the Ultralytics YOLO framework, where obtaining gradients is non-trivial.
+- **Multi-Faceted Feature Exploration:** Instead of focusing on a single most significant feature, DFF provides a broader, more detailed view of the activation space by identifying multiple activation patterns within a single image.
+
+```bash
+python src/dff.py
+```
+
+![](images/dff.png)
+
+DFF offers several benefits and trade-offs when compared to other visualization methods like EigenCAM. One key advantage is its multi-component analysis, which provides a comprehensive breakdown of feature activations. Unlike EigenCAM, which focuses on dominant spatial features, DFF reveals separate feature clusters, allowing for deeper exploration of how different regions of an image influence the YOLO model’s predictions. However, a notable trade-off is that DFF, similar to EigenCAM, does not provide class-level information. While it effectively identifies significant spatial activation structures, it does not indicate which specific object category each component corresponds to, limiting its use for category-specific interpretability. Despite this limitation, DFF’s ability to uncover diverse feature activations makes it a valuable tool for enhancing understanding of complex model behavior.
+
 ## Additional Task - Evaluation Metrics Comparison Graph
 In this section we will show how to execute the code associated with the following representation:
 
