@@ -143,7 +143,9 @@ EigenCAM is a powerful visualization technique for understanding which parts of 
 - **No Class Discrimination:** Unlike Grad-CAM, which associates regions with specific classes, EigenCAM simply identifies the most significant features. This method provides a broad understanding of feature importance but does not differentiate between categories.
 - **Gradient-Free Activation Analysis:** EigenCAM uses the first principal component of the activation map to detect important spatial features. It analyzes the activation space without requiring gradients, simplifying the process and enhancing compatibility with YOLO.
 
-
+```bash
+python src/eigen_cam.py
+```
 
 ## Additional Task - Evaluation Metrics Comparison Graph
 In this section we will show how to execute the code associated with the following representation:
