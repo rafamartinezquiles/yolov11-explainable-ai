@@ -100,7 +100,7 @@ In case of not having the necessary time or resources to train the neural networ
 This section covers the process of executing a script to create a new folder containing labels associated with the predictions from the test folder. Each label file will share the same name as its corresponding original image but will use a .txt extension instead of the image extension (e.g., .jpg or .png). This format allows for easy comparison with the original labels to compute evaluation metrics. The script can be executed as follows:
 
 ```bash
-python prediction.py --model complete_path\yolov11_models_s\weights\best.pt --source complete_path\test\images
+python src/prediction.py --model complete_path\yolov11_models_s\weights\best.pt --source complete_path\test\images
 ```
 
 Executing this command yields several key results. First, it provides the average times in milliseconds for preprocessing, inference, and postprocessing, offering insights into the model's efficiency. Additionally, it outputs the total number of tags detected during the process. Finally, it generates a folder containing all the detected tags in .txt format, which can be used subsequently to calculate the desired evaluation metrics.
@@ -133,8 +133,17 @@ The F1 score is a balanced metric that combines precision and recall into a sing
 This code is designed to evaluate the performance of object detection models by comparing predicted bounding boxes with ground truth bounding boxes. It parses YOLO format label files, computes Intersection over Union (IoU) to match predicted boxes to ground truth boxes, and then calculates precision, recall, F1 score, and mean Average Precision (mAP). 
 
 ```bash
-python evaluation_metrics.py <original_labels_folder> <predicted_labels_folder>
+python src/evaluation_metrics.py <original_labels_folder> <predicted_labels_folder>
 ```
+
+## Eigen-Cam: Visualizing Feature Importance Without Gradients
+EigenCAM is a powerful visualization technique for understanding which parts of an image influence the decisions of a YOLO model. Unlike gradient-based methods, EigenCAM operates directly on the activations, making it gradient-free. This is particularly advantageous when working with the Ultralytics YOLO implementation, where obtaining gradients is not straightforward. Some of the key features are:
+
+- **Blue Pixel Highlights:** EigenCAM visualizes important regions of the image by highlighting dominant spatial features. The blue pixels indicate areas with the greatest impact on the model's output, often correlating closely with the detected bounding boxes.
+- **No Class Discrimination:** Unlike Grad-CAM, which associates regions with specific classes, EigenCAM simply identifies the most significant features. This method provides a broad understanding of feature importance but does not differentiate between categories.
+- **Gradient-Free Activation Analysis:** EigenCAM uses the first principal component of the activation map to detect important spatial features. It analyzes the activation space without requiring gradients, simplifying the process and enhancing compatibility with YOLO.
+
+
 
 ## Additional Task - Evaluation Metrics Comparison Graph
 In this section we will show how to execute the code associated with the following representation:
@@ -144,7 +153,7 @@ In this section we will show how to execute the code associated with the followi
 This graph provides a clear comparison of the evaluation metrics across all YOLOv11 models. A quick analysis reveals that the extreme model outperforms the others in most metrics, with the nano model following closely behind. Interestingly, this highlights that a larger model does not always guarantee better performance. To obtain it, we should only execute the following command and we are all set.
 
 ```bash
-python graph_evaluation_metrics.py
+python src/graph_evaluation_metrics.py
 ```
 
 ## Additional Task - Computational Efficiency Graph
@@ -155,4 +164,4 @@ In this section we will show how to execute the code associated with the followi
 This graph presents a detailed comparison of the computational efficiency across all YOLOv11 models. A closer look reveals that the preprocessing and postprocessing times remain nearly constant, irrespective of the model size, indicating that these stages are not influenced by the model used. However, the inference time per image significantly increases as the model size grows, which is expected due to the increased complexity and computational demands of larger models. This logical trend highlights the trade-off between model size and computational efficiency. To replicate these results, simply execute the following command, and you're ready to go.
 
 ```bash
-python computational_efficiency_matrix.py
+python src/computational_efficiency_matrix.py
