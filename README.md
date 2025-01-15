@@ -149,6 +149,8 @@ python src/eigen_cam.py
 
 ![](images/eigen_cam.png)
 
+This script will process the specified input image, apply EigenCAM, and display the resulting image with blue pixels highlighting the most significant spatial features contributing to the model’s predictions. The only limitation is that there is no Class-Specific Attribution.
+
 ## Additional Task - Evaluation Metrics Comparison Graph
 In this section we will show how to execute the code associated with the following representation:
 
