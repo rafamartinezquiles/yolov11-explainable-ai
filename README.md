@@ -147,6 +147,8 @@ EigenCAM is a powerful visualization technique for understanding which parts of 
 python src/eigen_cam.py
 ```
 
+![](images/eigen_cam.png)
+
 ## Additional Task - Evaluation Metrics Comparison Graph
 In this section we will show how to execute the code associated with the following representation:
 
