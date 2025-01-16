@@ -166,6 +166,15 @@ python src/dff.py
 
 DFF offers several benefits and trade-offs when compared to other visualization methods like EigenCAM. One key advantage is its multi-component analysis, which provides a comprehensive breakdown of feature activations. Unlike EigenCAM, which focuses on dominant spatial features, DFF reveals separate feature clusters, allowing for deeper exploration of how different regions of an image influence the YOLO model’s predictions. However, a notable trade-off is that DFF, similar to EigenCAM, does not provide class-level information. While it effectively identifies significant spatial activation structures, it does not indicate which specific object category each component corresponds to, limiting its use for category-specific interpretability. Despite this limitation, DFF’s ability to uncover diverse feature activations makes it a valuable tool for enhancing understanding of complex model behavior.
 
+## Combining DFF Results with the Original Image
+It is possible to overlay the DFF (Deep Feature Factorization) visualization onto the original image to gain a more intuitive understanding of how different feature components align with the objects detected. However, it is important to consider that the aspect ratio of the DFF result and the original image may differ. This discrepancy can lead to slight misalignments when combining the two images, making it appear as though some elements do not perfectly match. To minimize this effect, careful resizing or aspect ratio adjustments may be necessary to improve alignment between the DFF visualization and the original image while preserving spatial accuracy. Despite these challenges, combining DFF results with the input image remains a powerful way to interpret model predictions by highlighting how feature clusters correspond to visual regions of interest.
+
+```bash
+python src/combination_dff_original.py
+```
+
+![](images/combination_dff_original.png)
+
 ## Additional Task - Evaluation Metrics Comparison Graph
 In this section we will show how to execute the code associated with the following representation:
 
