@@ -1,8 +1,10 @@
 # Analyzing Pixel Contributions with Explainable AI on Autonomous Driving
-
+Using machine learning algorithms, including Ultralytics, Torch, OpenCV and NIVIDIA's CUDA to see what pixels affect the most in the context of autonomous driving during object detection.
 
 ## Overview and Background
+Detecting and interpreting critical image features for autonomous driving tasks is a complex and pivotal challenge. This project focuses on explainable AI techniques applied to image classification and object detection, offering insights into which pixel-level features most significantly contribute to model predictions. By leveraging state-of-the-art neural networks, including YOLOv11, and advanced visualization methods, this repository demonstrates how explainability can enhance trust and performance assessment in autonomous driving models.
 
+![](images/overview_and_background.png)
 
 ## Table of Contents
 ```
@@ -14,6 +16,7 @@ yolov11-explainable-ai
     |__ dff.png
     |__ eigen_cam.png
     |__ combination_dff_original.png
+    |__ overview_and_background.png
 |__ src
     |__ split_train_test.py
     |__ prediction.py
