@@ -167,7 +167,11 @@ Before executing the following command, follow these steps to modify the `src/ei
    ```python
    # img_path = "full_path_to_the_image"
    # model = YOLO("full_path_to_the_model_weight")
+3. Replace "full_path_to_the_image" and "full_path_to_the_model_weight" with the appropriate file paths.
+4. Uncomment both lines by removing the # at the beginning:
+5. Save the file.
 
+Once these steps are completed, you are ready to execute the command below:
 
 ```bash
 python src/eigen_cam.py 
