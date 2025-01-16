@@ -188,6 +188,19 @@ Deep Feature Factorization (DFF) is a method that decomposes the activation spac
 - **Gradient-Free Method:** Like EigenCAM, DFF does not require gradient computations, making it highly compatible with the Ultralytics YOLO framework, where obtaining gradients is non-trivial.
 - **Multi-Faceted Feature Exploration:** Instead of focusing on a single most significant feature, DFF provides a broader, more detailed view of the activation space by identifying multiple activation patterns within a single image.
 
+Before executing the following command, follow these steps to modify the `src/dff.py` file:
+
+1. Open `src/dff.py`.
+2. Locate the lines:
+   ```python
+   # img_path = "full_path_to_the_image"
+   # model = YOLO("full_path_to_the_model_weight")
+3. Replace "full_path_to_the_image" and "full_path_to_the_model_weight" with the appropriate file paths.
+4. Uncomment both lines by removing the # at the beginning:
+5. Save the file.
+
+Once these steps are completed, you are ready to execute the command below:
+
 ```bash
 python src/dff.py
 ```
@@ -198,6 +211,19 @@ DFF offers several benefits and trade-offs when compared to other visualization 
 
 ## Combining DFF Results with the Original Image
 It is possible to overlay the DFF (Deep Feature Factorization) visualization onto the original image to gain a more intuitive understanding of how different feature components align with the objects detected. However, it is important to consider that the aspect ratio of the DFF result and the original image may differ. This discrepancy can lead to slight misalignments when combining the two images, making it appear as though some elements do not perfectly match. To minimize this effect, careful resizing or aspect ratio adjustments may be necessary to improve alignment between the DFF visualization and the original image while preserving spatial accuracy. Despite these challenges, combining DFF results with the input image remains a powerful way to interpret model predictions by highlighting how feature clusters correspond to visual regions of interest.
+
+Before executing the following command, follow these steps to modify the `src/combination_dff_original.py` file:
+
+1. Open `src/combination_dff_original.py`.
+2. Locate the lines:
+   ```python
+   # img_path = "full_path_to_the_image"
+   # model = YOLO("full_path_to_the_model_weight")
+3. Replace "full_path_to_the_image" and "full_path_to_the_model_weight" with the appropriate file paths.
+4. Uncomment both lines by removing the # at the beginning:
+5. Save the file.
+
+Once these steps are completed, you are ready to execute the command below:
 
 ```bash
 python src/combination_dff_original.py
