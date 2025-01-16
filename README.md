@@ -13,6 +13,7 @@ yolov11-explainable-ai
     |__ timing_analysis_heatmap.png
     |__ dff.png
     |__ eigen_cam.png
+    |__ combination_dff_original.png
 |__ src
     |__ split_train_test.py
     |__ prediction.py
@@ -30,17 +31,8 @@ yolov11-explainable-ai
         |__ usage_examples
         |__ cam.py
         |__ setup.py
-|__ README.md
-|__ requirements.txt
-
-
-
-
-
-
-
-
 README.md
+requirements.txt
 ```
 
 ## Getting started
